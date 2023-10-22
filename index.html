@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyPorto</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6483689ab6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="header">
+      <nav id="navbar">
+        <a href="index.html"><img src="assets/logo.png" alt="Logo" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul id="menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="resume.html">RESUME</a></li>
+            <li><a href="port.html">PORTFOLIO</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="text-box">
+        <h1>Tiara Yuliandari</h1>
+        <h2>I am <span class="auto-type"></span></h2>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+      <script>
+        var typed = new Typed(".auto-type", {
+          strings: ["Student", "Tech Enthusiast", "Developer"],
+          typeSpeed: 150,
+          backspeed: 150,
+          loop: true,
+        });
+      </script>
+        <br />
+        <br />
+        <a href="about.html" class="hero-btn">About Me</a>
+      </div>
+
+      </script>
+      <div class="sos-container">
+        <a href="https://instagram.com/tiara_yuli08?igshid=MzRlODBiNWFlZA=="
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="www.linkedin.com/in/tiara-yuliandari-205b97265">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/TiaraYu8"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
+    </section>
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+
+<div class="copyright">
+  <footer>
+      Copyright © by TY. All Right Reserved
+    </footer>
+</div> 
+  </body>
+</html>

@@ -1,0 +1,753 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+#navbar {
+  position: sticky;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(8, 9, 17, 0.8), rgba(8, 9, 17, 0.8)),
+    url(assets/poto.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+nav {
+  flex-wrap: wrap;
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 70px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #00c853;
+  display: block;
+  margin: auto;
+  transition: width 0.19s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  width: 99%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 62px;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 8px 30px;
+  font-size: 13px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  border: 1px solid #00c853;
+  background: #00c853;
+  transition: 1s;
+}
+
+.container {
+  width: 50%;
+  height: 35vh;
+  color: #fff;
+  display: flex;
+  top: 30%;
+  left: 25%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.container h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+nav .fa {
+  display: none;
+}
+
+.sos-container {
+  position: absolute;
+  width: 0;
+  top: 87%;
+  right: 40px;
+  word-spacing: 3px;
+}
+.sos-container i {
+  color: #fff;
+  font-size: 22px;
+}
+
+.sos-container a:hover i {
+  color: #00c853;
+}
+
+.copyright {
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/*----about me page*/
+
+.sub-header {
+  height: 185vh;
+  width: 100%;
+  background: linear-gradient(rgba(8, 9, 17, 0.8), rgba(8, 9, 17, 0.8));
+  color: #fff;
+  text-align: center;
+}
+
+.sub-header h1 {
+  margin-top: 70px;
+  font-size: 35px;
+}
+
+.sub-header ul li img {
+  border-radius: 50%;
+}
+
+.sub-header p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sub-header h2 {
+  font-size: 18px;
+  text-align: center;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.sub-header p {
+  text-align: justify;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.sub-header hr {
+  position: absolute;
+  top: 155%;
+  left: 22%;
+  right: 22%;
+}
+
+/*----------resume------*/
+.resume-header {
+  height: 200vh;
+  width: 100%;
+  background: linear-gradient(rgba(8, 9, 17, 0.8), rgba(8, 9, 17, 0.8));
+  color: #fff;
+  text-align: center;
+}
+
+.skill-box {
+  width: 80%;
+  margin: 20px 10%;
+}
+.skill-box .title {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+.skill-box .skill-bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 0px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.skill-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 80%;
+  border-radius: 6px;
+  background: #00c853;
+  animation: progress 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+.skill-per.webDesign {
+  width: 80%;
+  animation-delay: 0.1s;
+}
+.skill-per.java {
+  width: 80%;
+  animation-delay: 0.2s;
+}
+.skill-per.MySQL {
+  width: 70%;
+  animation-delay: 0.3s;
+}
+
+.skill-per.Com {
+  width: 90%;
+  animation-delay: 0.3s;
+}
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.skill-per .tooltip {
+  position: absolute;
+  right: -14px;
+  top: -28px;
+  font-size: 9px;
+  font-weight: 500;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #000;
+  z-index: 1;
+}
+.tooltip::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  background-color: #000;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.res-cn {
+  position: absolute;
+  top: 85%;
+  left: -10%;
+  width: 1200px;
+}
+.timeline {
+  list-style: none;
+}
+
+.resume-header h1 {
+  font-size: 38px;
+  font-weight: 600;
+}
+.ed {
+  text-align: left;
+}
+
+.ed h2 {
+  position: absolute;
+  top: 35%;
+  left: 50.5%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.timeline {
+  position: absolute;
+  top: 45%;
+  left: 53.5%;
+  width: 900px;
+  color: #fff;
+  border-left: 2px solid #fff;
+  padding-left: 30px;
+}
+
+.sci-cont {
+  position: absolute;
+  top: 97%;
+  left: 65%;
+}
+
+.sci-cont a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: 2px solid #00c853;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00c853;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.sci-cont a:hover {
+  background-color: #00c853;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cv-container {
+  position: absolute;
+  top: 110%;
+  left: 27.5%;
+  display: inline-block;
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid #fff;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cv-container:hover {
+  background-color: #00c853;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sub-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+  position: absolute;
+  left: 21.5%;
+}
+
+.icon-skill {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 117%;
+  left: 60%;
+}
+
+/*----portfolio----*/
+
+.delid {
+  width: 414px;
+  height: 260px;
+}
+
+#about {
+  padding: 80px 70px;
+  color: #ababab;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1 {
+  padding-left: 10%;
+  flex-basis: 35%;
+}
+
+.container-port {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(8, 9, 17, 0.8), rgba(8, 9, 17, 0.8));
+  color: #fff;
+  text-align: center;
+}
+.port-col-1 {
+  flex-basis: 35%;
+  cursor: pointer;
+}
+.port-col-1 img {
+  margin-left: 40%;
+}
+.port-col-1 a {
+  margin-left: 40%;
+}
+
+.port-col-1 a label {
+  cursor: pointer;
+}
+
+.port-col-1 a label:hover {
+  color: #00c853;
+}
+
+.port-col-2 {
+  flex-basis: 60%;
+  cursor: pointer;
+}
+
+.port-col-2 a label {
+  cursor: pointer;
+}
+
+.port-col-2 a label:hover {
+  color: #00c853;
+}
+.about-col-1 img {
+  width: 100%;
+  height: 500px;
+}
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+.about-col-2 img {
+  cursor: pointer;
+}
+
+.about-col-2 a label {
+  cursor: pointer;
+}
+
+.about-col-2 a label:hover {
+  color: #00c853;
+}
+
+/*---contact---*/
+.sub-cont {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(8, 9, 17, 0.8), rgba(8, 9, 17, 0.8));
+  color: #fff;
+  text-align: center;
+}
+
+.contact-left {
+  flex-basis: 40%;
+}
+
+.contact-left p {
+  margin-left: 120px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.contact-left p a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hero-btn.btn2 {
+  display: inline-block;
+  background: #00c853;
+}
+
+.social-icons {
+  margin-left: 120px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: white;
+}
+
+.social-icons a:hover {
+  color: #00c853;
+}
+.contact-right {
+  flex-basis: 60%;
+}
+
+.contact-right form {
+  width: 85%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+@media (max-width: 900px) {
+  .text-box h1 {
+    font-size: 36px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background: #000;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  nav-links ul {
+    padding: 30px;
+  }
+  .sub-header {
+    height: 195vh;
+    width: 100%;
+    background: linear-gradient(rgba(8, 9, 17, 0.8), rgba(8, 9, 17, 0.8));
+    color: #fff;
+    text-align: center;
+  }
+  .sub-header h2 {
+    font-size: 18px;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .sub-header p {
+    text-align: justify;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .sub-header hr {
+    position: absolute;
+    top: 175%;
+    left: 8%;
+    right: 8%;
+  }
+
+  .res-cn {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 800px;
+  }
+  .resume-header {
+    height: 270vh;
+    width: 100%;
+    background: linear-gradient(rgba(8, 9, 17, 0.8), rgba(8, 9, 17, 0.8));
+    color: #fff;
+    text-align: center;
+  }
+  .sub-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+    position: absolute;
+    left: 37.5%;
+  }
+
+  .about-col-1 img {
+    width: 400px;
+    height: 430px;
+    position: absolute;
+    left: 13%;
+    border-radius: 15px;
+  }
+
+  .skill-box .skill-bar {
+    height: 6px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 0px;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+  }
+
+  .skil-cont {
+    width: 380px;
+    position: absolute;
+    top: 200%;
+  }
+
+  .ed h2 {
+    position: absolute;
+    left: 16%;
+    top: 95%;
+  }
+  .timeline {
+    position: absolute;
+    top: 100%;
+    left: 20%;
+  }
+
+  .icon-skill {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 150%;
+    left: 27%;
+  }
+  .sci-cont a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: 35px;
+    height: 35px;
+
+    background: transparent;
+    border: 2px solid #00c853;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00c853;
+    text-decoration: none;
+  }
+
+  .cv-container {
+    position: absolute;
+    top: 98%;
+    left: 17.5%;
+    display: inline-block;
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid #fff;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .sub-cont {
+    height: 120vh;
+    width: 100%;
+    background: linear-gradient(rgba(8, 9, 17, 0.8), rgba(8, 9, 17, 0.8));
+    color: #fff;
+    text-align: center;
+  }
+
+  .contact-left {
+    flex-basis: 30%;
+  }
+
+  .contact-left p {
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .contact-left p a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .hero-btn.btn2 {
+    display: inline-block;
+    background: #00c853;
+  }
+
+  .social-icons {
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: white;
+  }
+
+  .social-icons a:hover {
+    color: #00c853;
+  }
+  .contact-right {
+    flex-basis: 60%;
+  }
+
+  .contact-right form {
+    width: 85%;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+  }
+  .container-port {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(8, 9, 17, 0.8), rgba(8, 9, 17, 0.8));
+    color: #fff;
+    text-align: center;
+  }
+  .port-col-1 img {
+    margin-left: 10%;
+  }
+  .port-col-1 a {
+    margin-left: 10%;
+  }
+  .port-col-2 img {
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+  .port-col-2 a {
+    margin-left: 10%;
+  }
+}
