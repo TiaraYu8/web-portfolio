@@ -38,7 +38,14 @@
           alert("Email harus mengandung karakter '@'. Silakan isi email dengan benar.");
           return false; 
         }
+        else{
+          alert("Pesan berhasil terkirim");
+          return false;
+        }
+        document.forms["formVal"].reset();
       }
+
+      
     </script>
   </head>
   <body>
@@ -92,9 +99,9 @@
           <div class="contact-right">
             <br>
             <br><br>
-            <form name="formVal" method="post" onsubmit="return validate(this);">
+            <form name="formVal" method="post" onsubmit="return validate(this); return false;">
               <input type="text" name="txtName" placeholder="Your Name">
-              <input type="email" name="txtMail" placeholder="Your Email">
+              <input id="email" type="email" name="txtMail" placeholder="Your Email">
               <textarea name="message" rows="6" placeholder="Your Message"></textarea>
               <button type="submit" class="hero-btn btn2">Send</button>
             </form>
@@ -116,5 +123,6 @@
     <div class="copyright">
       <footer>Copyright © by TY. All Right Reserved</footer>
     </div> 
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
